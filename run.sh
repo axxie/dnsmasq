@@ -1,4 +1,5 @@
 docker rm -f dnsmasq
+touch ${PWD}/logs/dnsmasq.log
 docker run -d --name dnsmasq \
 --network=host --cap-add=NET_ADMIN --cap-add=NET_RAW \
 -p 53:53/tcp -p 53:53/udp \
